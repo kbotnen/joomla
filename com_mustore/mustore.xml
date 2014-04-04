@@ -7,7 +7,7 @@
         <authorUrl>http://www.mbmedia.no</authorUrl>
         <copyright>Copyright Info</copyright>
         <license>License Info</license>
-        <version>0.0.1</version>
+        <version>0.0.3</version>
         <description>Description of the Music store component.</description>
  
         <update> <!-- Runs on update; New since J2.5 -->
