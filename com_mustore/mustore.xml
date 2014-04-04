@@ -22,7 +22,7 @@
         </files>
  
         <administration>
-                <menu>Music store!</menu>
+                <menu>MuStore</menu>
                 <files folder="admin">
 
                         <filename>index.html</filename>
