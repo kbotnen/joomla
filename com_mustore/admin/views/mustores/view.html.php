@@ -27,21 +27,36 @@ class MuStoreViewMuStores extends JViewLegacy {
     $this -> items = $items;
     $this -> pagination = $pagination;
 
-    // Set the toolbar
-    $this -> addToolBar();
+    // Set the toolbar and number of found items
+    $this -> addToolBar($this -> pagination -> total);
 
     // Display the template
     parent::display($tpl);
+
+    // Set the document
+    $this -> setDocument();
   }
 
   /**
    * Setting the toolbar
    */
-  protected function addToolBar() {
-    JToolBarHelper::title(JText::_('COM_MUSTORE_MANAGER_MUSTORES'));
-    JToolBarHelper::deleteList('', 'mustores.delete');
+  protected function addToolBar($total = null) {
+    JToolBarHelper::title(JText::_('COM_MUSTORE_MANAGER_MUSTORE') .
+    //Reflect number of items in title!
+    ($total ? ' <span style="font-size: 0.5em; vertical-align: middle;">(' . $total . ')</span>' : ''), 'mustore');
+    JToolBarHelper::deleteList('', 'mustore.delete');
     JToolBarHelper::editList('mustore.edit');
     JToolBarHelper::addNew('mustore.add');
+  }
+
+  /**
+   * Method to set up the document properties
+   *
+   * @return void
+   */
+  protected function setDocument() {
+    $document = JFactory::getDocument();
+    $document -> setTitle(JText::_('COM_MUSTORE_ADMINISTRATION'));
   }
 
 }

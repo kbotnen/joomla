@@ -10,7 +10,14 @@ jimport('joomla.application.component.view');
  */
 class MuStoreViewMuStore extends JViewLegacy {
   /**
-   * display method of MuStore view
+   * View form
+   *
+   * @var         form
+   */
+  protected $form = null;
+
+  /**
+   * display method of Hello view
    * @return void
    */
   public function display($tpl = null) {
@@ -32,6 +39,9 @@ class MuStoreViewMuStore extends JViewLegacy {
 
     // Display the template
     parent::display($tpl);
+
+    // Set the document
+    $this -> setDocument();
   }
 
   /**
@@ -41,9 +51,20 @@ class MuStoreViewMuStore extends JViewLegacy {
     $input = JFactory::getApplication() -> input;
     $input -> set('hidemainmenu', true);
     $isNew = ($this -> item -> id == 0);
-    JToolBarHelper::title($isNew ? JText::_('COM_MuStore_MANAGER_MuStore_NEW') : JText::_('COM_MuStore_MANAGER_MuStore_EDIT'));
-    JToolBarHelper::save('MuStore.save');
-    JToolBarHelper::cancel('MuStore.cancel', $isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE');
+    JToolBarHelper::title($isNew ? JText::_('COM_MUSTORE_MANAGER_MUSTORE_NEW') : JText::_('COM_MUSTORE_MANAGER_MUSTORE_EDIT'), 'mustore');
+    JToolBarHelper::save('mustore.save');
+    JToolBarHelper::cancel('mustore.cancel', $isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE');
+  }
+
+  /**
+   * Method to set up the document properties
+   *
+   * @return void
+   */
+  protected function setDocument() {
+    $isNew = ($this -> item -> id < 1);
+    $document = JFactory::getDocument();
+    $document -> setTitle($isNew ? JText::_('COM_MUSTORE_MUSTORE_CREATING') : JText::_('COM_MUSTORE_MUSTORE_EDITING'));
   }
 
 }

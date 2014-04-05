@@ -35,8 +35,12 @@
     <folder>models</folder>
     <folder>language</folder>
   </files>
+  <media destination="com_mustore" folder="media">
+    <filename>index.html</filename>
+    <folder>images</folder>
+  </media>
   <administration>
-    <menu>COM_MUSTORE_MENU</menu>
+    <menu img="../media/com_mustore/images/tux-16x16.png">COM_MUSTORE_MENU</menu>
     <files folder="admin">
       <filename>index.html</filename>
       <filename>mustore.php</filename>

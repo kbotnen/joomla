@@ -2,6 +2,10 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
+// Set some global property
+$document = JFactory::getDocument();
+$document -> addStyleDeclaration('.icon-mustore {background-image: url(../media/com_mustore/images/tux-16x16.png);}');
+
 // import joomla controller library
 jimport('joomla.application.component.controller');
 
