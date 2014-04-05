@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <metadata>
-        <layout title="MuStore Main view">
+        <layout title="Main view">
                 <message>
-                        "Show the mainview of your mustore installation.
+                        Displays the mainview of your mustore installation.
                 </message>
         </layout>
 </metadata>

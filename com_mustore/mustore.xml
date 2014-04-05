@@ -7,7 +7,7 @@
         <authorUrl>http://www.mbmedia.no</authorUrl>
         <copyright>Copyright Info</copyright>
         <license>License Info</license>
-        <version>0.0.3</version>
+        <version>0.0.4</version>
         <description>Description of the Music store component.</description>
  
         <update> <!-- Runs on update; New since J2.5 -->
@@ -21,6 +21,7 @@
                 <filename>mustore.php</filename>
                 <filename>controller.php</filename>
                 <folder>views</folder>
+                <folder>models</folder>
         </files>
  
         <administration>
