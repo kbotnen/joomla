@@ -49,7 +49,7 @@ class MuStoreModelMuStore extends JModelItem {
       $table -> load($id);
 
       // Assign the message
-      $this -> messages[$id] = $table -> greeting;
+      $this -> messages[$id] = $table -> heading;
     }
 
     return $this -> messages[$id];

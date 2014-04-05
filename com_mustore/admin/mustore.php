@@ -1,1 +1,1 @@
-Hello world admin
+Mu Store admin
