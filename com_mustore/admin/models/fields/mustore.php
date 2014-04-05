@@ -7,7 +7,7 @@ jimport('joomla.form.helper');
 JFormHelper::loadFieldClass('list');
 
 /**
- * HelloWorld Form Field class for the HelloWorld component
+ * MuStore Form Field class for the MuStore component
  */
 class JFormFieldMuStore extends JFormFieldList {
   /**
@@ -32,7 +32,7 @@ class JFormFieldMuStore extends JFormFieldList {
     $options = array();
     if ($messages) {
       foreach ($messages as $message) {
-        $options[] = JHtml::_('select.option', $message -> id, $message -> greeting);
+        $options[] = JHtml::_('select.option', $message -> id, $message -> heading);
       }
     }
     $options = array_merge(parent::getOptions(), $options);

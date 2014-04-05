@@ -7,7 +7,7 @@
     <fieldset name="request">
       <field
       name="id"
-      type="list"
+      type="mustore"
       label="MuStore Header"
       description="The componentheading text to be displayed"
       />

@@ -6,7 +6,7 @@ defined('_JEXEC') or die('Restricted access');
 jimport('joomla.application.component.modelitem');
 
 /**
- * HelloWorld Model
+ * MuStore Model
  */
 class MuStoreModelMuStore extends JModelItem {
   /**
