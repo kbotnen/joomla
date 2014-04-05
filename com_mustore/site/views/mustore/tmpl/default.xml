@@ -10,7 +10,7 @@
       type="list"
       label="MuStore Header"
       description="The componentheading text to be displayed"
-      </field>
+      />
     </fieldset>
   </fields>
 </metadata>
