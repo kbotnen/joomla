@@ -33,9 +33,10 @@
     <filename>controller.php</filename>
     <folder>views</folder>
     <folder>models</folder>
+    <folder>language</folder>
   </files>
   <administration>
-    <menu>MuStore</menu>
+    <menu>COM_MUSTORE_MENU</menu>
     <files folder="admin">
       <filename>index.html</filename>
       <filename>mustore.php</filename>
@@ -44,6 +45,7 @@
       <folder>tables</folder>
       <folder>models</folder>
       <folder>views</folder>
+      <folder>language</folder>
     </files>
   </administration>
 

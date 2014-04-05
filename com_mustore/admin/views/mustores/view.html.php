@@ -8,7 +8,7 @@ jimport('joomla.application.component.view');
 /**
  * MuStores View
  */
-class MuStoresViewMuStores extends JViewLegacy {
+class MuStoreViewMuStores extends JViewLegacy {
   /**
    * MuStores view display method
    * @return void

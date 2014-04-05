@@ -17,7 +17,7 @@ class MuStoreModelMuStores extends JModelList {
     $db = JFactory::getDBO();
     $query = $db -> getQuery(true);
     // Select some fields from the hello table
-    $query -> select('id,heading') -> from('#__mustores');
+    $query -> select('id,heading') -> from('#__mustore');
 
     return $query;
   }
