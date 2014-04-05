@@ -3,18 +3,14 @@
   <layout title="Main view">
     <message>Displays the mainview of your mustore installation.</message>
   </layout>
-  <fields name="request">
+  <fields name="request" addfieldpath="/administrator/components/com_mustore/models/fields">
     <fieldset name="request">
       <field
       name="id"
       type="list"
-      label="MuStore header"
+      label="MuStore Header"
       description="The componentheading text to be displayed"
-      default="1">
-        <option value="1">Hello World!</option>
-        <option value="2">Good bye World!</option>
       </field>
     </fieldset>
   </fields>
-</metadata>
 </metadata>

@@ -1,38 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="component" version="3.2" method="upgrade">
-        <name>com_mustore</name>
-        <creationDate>April 2014</creationDate>
-        <author>Kristian Botnen</author>
-        <authorEmail>post@mbmedia.no</authorEmail>
-        <authorUrl>http://www.mbmedia.no</authorUrl>
-        <copyright>Copyright Info</copyright>
-        <license>License Info</license>
-        <version>0.0.5</version>
-        <description>Description of the Music store component.</description>
- 
-        <update> <!-- Runs on update; New since J2.5 -->
-                <schemas>
-                        <schemapath type="mysql">sql/updates/mysql</schemapath>
-                </schemas>
-        </update>
- 
-        <files folder="site">
-                <filename>index.html</filename>
-                <filename>mustore.php</filename>
-                <filename>controller.php</filename>
-                <folder>views</folder>
-                <folder>models</folder>
-        </files>
- 
-        <administration>
-                <menu>MuStore</menu>
-                <files folder="admin">
+  <name>com_mustore</name>
+  <creationDate>April 2014</creationDate>
+  <author>Kristian Botnen</author>
+  <authorEmail>post@mbmedia.no</authorEmail>
+  <authorUrl>http://www.mbmedia.no</authorUrl>
+  <copyright>Copyright Info</copyright>
+  <license>License Info</license>
+  <version>0.0.6</version>
+  <description>Description of the Music store component.</description>
+  <install>
+    <!-- Runs on install -->
+    <sql>
+      <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+    </sql>
+  </install>
+  <uninstall>
+    <!-- Runs on uninstall -->
+    <sql>
+      <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+    </sql>
+  </uninstall>
+  <update>
+    <!-- Runs on update; New since J2.5 -->
+    <schemas>
+      <schemapath type="mysql">sql/updates/mysql</schemapath>
+    </schemas>
+  </update>
+  <files folder="site">
+    <filename>index.html</filename>
+    <filename>mustore.php</filename>
+    <filename>controller.php</filename>
+    <folder>views</folder>
+    <folder>models</folder>
+  </files>
+  <administration>
+    <menu>MuStore</menu>
+    <files folder="admin">
+      <filename>index.html</filename>
+      <filename>mustore.php</filename>
+      <folder>sql</folder>
+      <folder>tables</folder>
+      <folder>models</folder>
+    </files>
+  </administration>
 
-                        <filename>index.html</filename>
-                        <filename>mustore.php</filename>
-
-                        <folder>sql</folder>
-                </files>
-        </administration>
-     
 </extension>
