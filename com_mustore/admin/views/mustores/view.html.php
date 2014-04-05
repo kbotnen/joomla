@@ -27,8 +27,21 @@ class MuStoreViewMuStores extends JViewLegacy {
     $this -> items = $items;
     $this -> pagination = $pagination;
 
+    // Set the toolbar
+    $this -> addToolBar();
+
     // Display the template
     parent::display($tpl);
+  }
+
+  /**
+   * Setting the toolbar
+   */
+  protected function addToolBar() {
+    JToolBarHelper::title(JText::_('COM_MUSTORE_MANAGER_MUSTORES'));
+    JToolBarHelper::deleteList('', 'mustores.delete');
+    JToolBarHelper::editList('mustore.edit');
+    JToolBarHelper::addNew('mustore.add');
   }
 
 }

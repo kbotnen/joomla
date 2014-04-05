@@ -7,8 +7,8 @@
   <authorUrl>http://www.mbmedia.no</authorUrl>
   <copyright>Copyright Info</copyright>
   <license>License Info</license>
-  <version>0.0.7</version>
-  <description>Description of the Music store component.</description>
+  <version>0.0.9</version>
+  <description>COM_MUSTORE_DESCRIPTION</description>
   <install>
     <!-- Runs on install -->
     <sql>
@@ -46,6 +46,7 @@
       <folder>models</folder>
       <folder>views</folder>
       <folder>language</folder>
+      <folder>controllers</folder>
     </files>
   </administration>
 
