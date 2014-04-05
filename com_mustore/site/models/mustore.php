@@ -20,7 +20,19 @@ class MuStoreModelMuStore extends JModelItem {
    */
   public function getMsg() {
     if (!isset($this -> msg)) {
-      $this -> msg = 'Hello MuStore Model!';
+
+      $jinput = JFactory::getApplication() -> input;
+      $id = $jinput -> get('id', 1, 'INT');
+
+      switch ($id) {
+        case 2 :
+          $this -> msg = 'Good bye World!';
+          break;
+        default :
+        case 1 :
+          $this -> msg = 'Hello World!';
+          break;
+      }
     }
     return $this -> msg;
   }
