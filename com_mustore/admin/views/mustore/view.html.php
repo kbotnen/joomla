@@ -17,7 +17,7 @@ class MuStoreViewMuStore extends JViewLegacy {
   protected $form = null;
 
   /**
-   * display method of Hello view
+   * display method of Mustore view
    * @return void
    */
   public function display($tpl = null) {
