@@ -44,7 +44,7 @@ class MuStoreViewMuStores extends JViewLegacy {
     JToolBarHelper::title(JText::_('COM_MUSTORE_MANAGER_MUSTORE') .
     //Reflect number of items in title!
     ($total ? ' <span style="font-size: 0.5em; vertical-align: middle;">(' . $total . ')</span>' : ''), 'mustore');
-    JToolBarHelper::deleteList('', 'mustore.delete');
+    JToolBarHelper::deleteList('Are you sure you want to delete this item?', 'mustores.delete');
     JToolBarHelper::editList('mustore.edit');
     JToolBarHelper::addNew('mustore.add');
   }
