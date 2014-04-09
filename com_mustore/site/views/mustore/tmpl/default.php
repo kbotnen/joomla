@@ -33,7 +33,12 @@ foreach ($this -> rows as $row) {
 </div>
 
 <div class="preview">
-<object height="30" width="100" data="<?php echo $row[5];?>"></object>  
+  
+<audio controls>
+  <source src="<?php echo $row[5];?>" type="audio/mpeg">
+  Your browser does not support this audio format.
+</audio>
+
   
 </div>
 
