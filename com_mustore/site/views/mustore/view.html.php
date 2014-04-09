@@ -12,7 +12,7 @@ class MuStoreViewMuStore extends JViewLegacy {
   // Overwriting JView display method
   function display($tpl = null) {
     // Assign data to the view
-    $this -> msg = $this -> get('Msg');
+    $this -> rows = $this -> get('Collection');
 
     // Check for errors.
     if (count($errors = $this -> get('Errors'))) {

@@ -12,7 +12,7 @@ class MuStoreModelMuStore extends JModelItem {
   /**
    * @var array messages
    */
-  protected $messages;
+  protected $rows;
 
   /**
    * Returns a reference to the a Table object, always creating it.
@@ -28,31 +28,27 @@ class MuStoreModelMuStore extends JModelItem {
   }
 
   /**
-   * Get the message
-   * @param  int    The corresponding id of the message to be retrieved
-   * @return string The message to be displayed to the user
+   * Get the collection
+   * @return string The collection to be displayed to the user
    */
-  public function getMsg($id = 1) {
-    if (!is_array($this -> messages)) {
-      $this -> messages = array();
+  public function getCollection() {
+    if (!is_array($this -> rows)) {
+      $this -> rows = array();
     }
 
-    if (!isset($this -> messages[$id])) {
-      //request the selected id
-      $jinput = JFactory::getApplication() -> input;
-      $id = $jinput -> get('id', 1, 'INT');
+    if (!isset($this -> $rows)) {
 
       // Get a TableMuStore instance
       $table = $this -> getTable();
 
-      // Load the message
-      $table -> load($id);
+      // Load the rows
+      $rows = $table -> loadRows('*');
 
-      // Assign the message
-      $this -> messages[$id] = $table -> heading;
+      // Assign the rows to the classvariables
+      $this -> rows = $rows;
     }
 
-    return $this -> messages[$id];
+    return $this -> rows;
   }
 
 }
