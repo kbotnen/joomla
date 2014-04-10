@@ -1,9 +1,9 @@
 #example {
-  background-color: red;
+
 }
 
 .collectionlist {
-  background-color: transparent;
+
 }
 
 .item {
@@ -13,11 +13,13 @@
 }
 
 .tracknumber {
+  min-width: 1em;
     
 }
 
 .title {
   padding-left: 2em;
+  min-width: 10em;
 }
 
 

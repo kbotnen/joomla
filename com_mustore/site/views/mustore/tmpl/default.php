@@ -7,7 +7,7 @@ $document->addStyleSheet(JURI::base() . 'components/com_mustore/css/com_mustore.
 
 ?>
 <div id="example">
-  <h1><?php echo "Albums"; ?></h1>  
+  <h1><?php echo "Forhåndslytting"; ?></h1>  
 </div>
 
 
