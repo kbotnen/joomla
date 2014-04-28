@@ -6,7 +6,7 @@ $document = JFactory::getDocument();
 $document->addStyleSheet(JURI::base() . 'components/com_mustore/css/com_mustore.css');
 
 ?>
-<div id="example">
+<div id="header">
   <h1><?php echo "Forhåndslytting"; ?></h1>  
 </div>
 
@@ -20,7 +20,10 @@ foreach ($this -> rows as $row) {
 <?php
  //Check if this is album or track.
  if ($row[2] == "album") {
-  echo "<h3>" . $row[1] . "</h3>"; 
+  echo "<h3>" . $row[1] . "</h3>";
+ ?>
+  <img class="cover_art" src="<?php echo substr($row[5], 0, -4);?>.png" />
+<?php
  } else {
 ?>
 
@@ -33,9 +36,10 @@ foreach ($this -> rows as $row) {
 </div>
 
 <div class="preview">
-  
-<audio controls>
-  <source src="<?php echo $row[5];?>" type="audio/mpeg">
+
+<audio controls>  
+  <source src="<?php echo substr($row[5], 0, -4);?>.mp3" type="audio/mpeg">
+  <source src="<?php echo substr($row[5], 0, -4);?>.ogg" type="audio/ogg">    
   Your browser does not support this audio format.
 </audio>
 
